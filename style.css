@@ -8,6 +8,12 @@
     scroll-behavior: smooth;
 }
 
+body {
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+}
+
 header {
     background-color: #f0f0f0;
     width: 100%;
@@ -17,6 +23,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 200px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .logo {
@@ -33,6 +40,7 @@ header {
     font-size: 1.1em;
     font-weight: 500;
     padding-left: 30px;
+    transition: color 0.3s ease;
 }
 
 .navigation a:hover {
@@ -41,22 +49,29 @@ header {
 
 section {
     padding: 100px 200px;
+    margin-bottom: 50px;
 }
 
-.main {
+    .main {
     width: 100%;
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: url(images/a3.jpg) no-repeat;
+    justify-content: center;
+    background: url(images/Abdullah.png) no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-}
+    margin-top: 80px;
+    padding: 50px 20px;
+    text-align: center;
+    flex-direction: column;
+    }
+
 
 .main h2 {
     color: #fff;
-    font-size: 1.1em;
+    font-size: 1.2em;
     font-weight: 500;
 }
 
@@ -64,16 +79,16 @@ section {
     display: inline-block;
     margin-top: 10px;
     color: #4e9eff;
-    font-size: 1.5em;
+    font-size: 1.7em;
     font-weight: 700;
 }
 
 .main h3 {
     color: #fff;
-    font-size: 1.3em;
+    font-size: 1.5em;
     font-weight: 600;
     letter-spacing: 1px;
-    margin-top: 10px;
+    margin-top: 15px;
     margin-bottom: 30px;
 }
 
@@ -82,24 +97,30 @@ section {
     background-color: #3a6cf4;
     text-decoration: none;
     font-size: 1em;
-    font-weight: 100;
+    font-weight: 500;
     display: inline-block;
-    padding: 0.4375em 0.5875em;
+    padding: 0.6em 1.2em;
     letter-spacing: 0.5px;
     border-radius: 15px;
     margin-bottom: 30px;
-    transition: 0.7s ease;
+    transition: all 0.4s ease;
 }
 
 .main-btn:hover {
     background-color: #0a49f6;
-    transform: scale(1.1);
+    transform: scale(1.08);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 .socaial-icons a {
     color: #fff;
     font-size: 1.7em;
     padding-right: 5%;
+    transition: transform 0.3s ease;
+}
+
+.socaial-icons a:hover {
+    transform: scale(1.2);
 }
 
 .title {
@@ -116,6 +137,7 @@ section {
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 .card {
@@ -123,13 +145,14 @@ section {
     width: 21.25em;
     box-shadow: 0 5px 25px rgba(1, 1, 1, 0.15);
     border-radius: 10px;
-    padding: 13px;
-    margin: 15px;
-    transition: 0.7s ease;
+    padding: 20px;
+    margin: 25px 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
 .icon {
@@ -144,9 +167,9 @@ section {
 
 .info h3 {
     color: #3a6cf4;
-    font-size: 1.2em;
+    font-size: 1.3em;
     font-weight: 700;
-    margin: 10px;
+    margin: 10px 0;
 }
 
 .contact .icon h3 {
@@ -164,9 +187,11 @@ section {
 .footer {
     background-color: #000;
     color: #fff;
-    padding: 0.8em;
+    padding: 1em 2em;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .footer-title {
@@ -177,16 +202,17 @@ section {
 .footer .socaial-icons a {
     color: #3a6cf4;
     font-size: 1.3em;
-    padding: 0 5px 0 0;
+    padding: 0 8px;
 }
 
+/* Responsive Design */
 @media (max-width: 1023px) {
     header {
         padding: 12px 20px;
     }
 
     .navigation a {
-        padding-left: 10px;
+        padding-left: 15px;
     }
 
     .title {
@@ -197,21 +223,52 @@ section {
         padding: 80px 20px;
     }
 
-    .main-content h2 {
+    .main h2 {
         font-size: 1em;
     }
 
-    .main-content h3 {
-        font-size: 1.6em;
+    .main h3 {
+        font-size: 1.4em;
     }
 
     .content {
         flex-direction: column;
+        align-items: center;
     }
 }
 
 @media (max-width: 641px) {
     body {
-        
+        padding: 0 10px;
+    }
+
+    .main {
+        padding: 60px 10px;
+        margin-top: 80px;
+    }
+
+    .card {
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .footer .socaial-icons {
+        margin-top: 10px;
+    }
+
+    .navigation {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .navigation a {
+        padding-left: 10px;
+        font-size: 1em;
     }
 }
