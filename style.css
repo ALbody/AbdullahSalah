@@ -8,7 +8,6 @@
     scroll-behavior: smooth;
 }
 
-
 header {
     background-color: #f0f0f0;
     width: 100%;
@@ -40,18 +39,16 @@ header {
     color: #601cfc;
 }
 
-
 section {
     padding: 100px 200px;
 }
-
 
 .main {
     width: 100%;
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: url(images/a3.png) no-repeat;
+    background: url("images/a3.png") no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -99,13 +96,11 @@ section {
     transform: scale(1.1);
 }
 
-
 .socaial-icons a {
     color: #fff;
     font-size: 1.7em;
     padding-right: 5%;
 }
-
 
 .title {
     display: flex;
@@ -115,7 +110,6 @@ section {
     font-weight: 800;
     margin-bottom: 30px;
 }
-
 
 .content {
     display: flex;
@@ -155,7 +149,6 @@ section {
     margin: 10px;
 }
 
-
 .contact .icon h3 {
     font-size: 4.5em;
 }
@@ -167,7 +160,6 @@ section {
 .contact .icon p {
     font-size: 1.5em;
 }
-
 
 .footer {
     background-color: #000;
@@ -187,7 +179,6 @@ section {
     font-size: 1.3em;
     padding: 0 5px 0 0;
 }
-
 
 @media (max-width: 1023px) {
     header {
@@ -221,5 +212,6 @@ section {
 
 @media (max-width: 641px) {
     body {
+        
     }
 }
