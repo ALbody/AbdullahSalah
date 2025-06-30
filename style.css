@@ -52,22 +52,21 @@ section {
     margin-bottom: 50px;
 }
 
-    .main {
+.main {
     width: 100%;
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url(images/Abdullah.png) no-repeat;
+    background: url(images/a3.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    margin-top: 80px;
+    margin-top: 80px; /* لتفادي تراكب الهيدر */
     padding: 50px 20px;
     text-align: center;
     flex-direction: column;
-    }
-
+}
 
 .main h2 {
     color: #fff;
